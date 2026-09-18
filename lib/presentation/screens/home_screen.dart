@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:parcial/presentation/widgets/app_drawer.dart';
-import 'package:parcial/config/router/ruter_app.dart';
 
 class MyHome extends StatelessWidget {
   final bool isDarkMode;
@@ -16,36 +15,40 @@ class MyHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Welcome to my app"),
+        title: const Text("Welcome"),
         actions: [
           IconButton(
             tooltip: "Change theme",
-            icon: Icon(
-              isDarkMode ? Icons.light_mode : Icons.dark_mode,
-            ),
+            icon: Icon(isDarkMode ? Icons.light_mode : Icons.dark_mode),
             onPressed: () => onThemeChanged(!isDarkMode),
           ),
         ],
       ),
-      drawer: AppDrawer(
-        isDarkMode: isDarkMode,
-        onThemeChanged: onThemeChanged,
-      ),
-      body: ListView.builder(
-        itemCount: Routes.length,
-        itemBuilder: (context, i) {
-          final item = Routes[i];
-          return ListTile(
-            title: Text(item.title),
-            subtitle: Text(item.description),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: item.builder),
-              );
-            },
-          );
-        },
+      drawer: AppDrawer(isDarkMode: isDarkMode, onThemeChanged: onThemeChanged),
+      body: ListView(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Expanded(
+                child: Center(
+                  child: Text(
+                    "Este es el primer parcial de dispositivos moviles",
+                    style: TextStyle(fontSize: 30),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              
+                 Text("app hacha por adrian y isaac "),
+              
+            ],
+          ),
+        ],
       ),
     );
   }

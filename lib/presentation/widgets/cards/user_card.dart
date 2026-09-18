@@ -9,8 +9,7 @@ class UserCard extends StatelessWidget {
       appBar: AppBar(title: Text("Mi profile")),
       body: SingleChildScrollView(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment
-              .stretch, // Estira las tarjetas para que ocupen todo el ancho disponible
+          crossAxisAlignment: CrossAxisAlignment.stretch, // Estira las tarjetas para que ocupen todo el ancho disponible
           children: [
             Card(
               margin: const EdgeInsets.all(16),
@@ -66,6 +65,7 @@ class UserCard extends StatelessWidget {
                                       style: TextStyle(
                                         color: Colors.grey,
                                         fontSize: 13,
+                              
                                       ),
                                     ),
                                   ),
@@ -268,7 +268,7 @@ class UserCard extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 8),
-                    const Divider(), // ← horizontal line
+                    Divider(), // ← horizontal line
 
                     Row(
                       children: [
@@ -280,7 +280,7 @@ class UserCard extends StatelessWidget {
                       ],
                     ),
                     SizedBox(height: 6),
-                    const Divider(),
+                    Divider(),
                     Row(
                       children: [
                         Icon(
@@ -298,7 +298,7 @@ class UserCard extends StatelessWidget {
                       ],
                     ),
                     SizedBox(height: 6),
-                    const Divider(),
+                    Divider(),
                     Row(
                       children: [
                         Icon(
@@ -316,7 +316,7 @@ class UserCard extends StatelessWidget {
                       ],
                     ),
                     SizedBox(height: 6),
-                    const Divider(),
+                    Divider(),
                     Row(
                       children: [
                         Icon(

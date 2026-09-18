@@ -24,12 +24,7 @@ class IsaacCard extends StatelessWidget {
                   children: [
                     CircleAvatar(
                       radius: 42,
-                      backgroundColor: theme.colorScheme.primary,
-                      child: Icon(
-                        Icons.person,
-                        color: theme.colorScheme.onPrimary,
-                        size: 42,
-                      ),
+                      backgroundImage: AssetImage('assets/isaac.png'),
                     ),
                     const SizedBox(width: 20),
                     Expanded(
