@@ -18,7 +18,22 @@ class AppDrawer extends StatelessWidget {
     
       child: ListView(
         children: [
-          const DrawerHeader(child: Text("our presonal information")),
+          UserAccountsDrawerHeader(
+            decoration: const BoxDecoration(
+              color: Color(0xFF176B87),
+            ),
+            currentAccountPicture: const CircleAvatar(
+              backgroundColor: Colors.white,
+              child: Icon(
+                Icons.person,
+                size: 40,
+                color: Color(0xFF176B87),
+              ),
+            ),
+            accountName: const Text(''),
+            accountEmail: const Text(''),
+            onDetailsPressed: () {},
+          ),
           ListTile(
             title: const Text("Home"),
             subtitle: const Text("Main screen"),
