@@ -4,6 +4,8 @@ import 'package:parcial/presentation/widgets/cards/user_card.dart';
 import 'package:parcial/config/router/router_model.dart';
 import 'package:parcial/presentation/screens/home_screen.dart';
 
+void _doNothing(bool value) {}
+
 class UserCardScreen extends StatelessWidget {
   const UserCardScreen({super.key});
   @override
@@ -24,12 +26,18 @@ final Routes = [
     title: 'text',
     description: 'vistas con textos',
     name: 'texto',
-    builder: (_) => const MyHome(), // create TextScreen
+    builder: (_) => MyHome(
+      isDarkMode: false,
+      onThemeChanged: _doNothing,
+    ), // create TextScreen
   ),
   RouterModel(
     title: 'Hola card',
     description: 'cardddd',
     name: 'card',
-    builder: (_) => const MyHome(),
+    builder: (_) => MyHome(
+      isDarkMode: false,
+      onThemeChanged: _doNothing,
+    ),
   ),
 ];
